@@ -1,0 +1,28 @@
+# To install all plugins on xfce4, run this commands
+
+# (First Command)
+doas pkg_add -v xfce-4.12p9
+
+# Package Info
+
+The Xfce Desktop Environment, base installation. Contains core Xfce plus:
+ * theme packages
+ * a terminal (xfce4-terminal)
+ * a calendar (orage)
+ * an image viewer (ristretto)
+ * a text editor (mousepad)
+ * a sound mixer (xfce4-mixer)
+ * a thumbnailer service used by thunar (tumbler)
+ * an application finder (xfce4-appfinder)
+
+
+# (Second command)
+doas pkg_add -v xfce-extras-4.12p1
+
+# Package Info
+
+The Xfce Desktop Environment, full installation. Contains base Xfce plus:
+ * a media player (parole)
+ * an mpc client (xfmpc)
+ * a lot of panel plugins
+ * thunar plugins (archive, media-tags, thumbnailers and vcs)

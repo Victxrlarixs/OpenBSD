@@ -1,80 +1,97 @@
-                          #Personal Handbook - Victxrlarixs
-
-            _.-|-/\-._     
-         \-'          '-.    
-        /    /\    /\    \/          _____                 ____   _____ _____  
-      \/  <    .  >  ./.  \/        / ___ \               |  _ \ / ____|  __ \ 
-  _   /  <         > /___\ |.      / /  / /___  ___  ____ | |_) | (___ | |  | |
-.< \ /  <     /\    > ( #) |#)    / /  / / __ \/ _ \/ __ \|  _ < \___ \| |  | |
-  | |    <       /\   -.   __\   / /__/ / /_/ /  __/ / / /| |_) |____) | |__| |
-   \   <  <   V      > )./_._(\  \_____/ .___/\___/_/ /_/ |____/|_____/|_____/ 
-  .)/\   <  <  .-     /  \_'_) )-..   /_/                                    
-      \  <   ./  /  > >       /._./
-      /\   <  '-' >    >    /   
-        '-._ < v    >   _.-'
-          / '-.______.-' \
-                 \/
-
-                 # Basic Guide, solve problems, reminders and others
-                 
-                                      #Content
-                    0.0 - Basic instalation
-                    1.0 - Instalation with xfce4
-                    2.0 - Instalation all dependencies xfce4
-                    3.0 - Networking using DHCP 
-                    4.0 - Firmware
-                    5.0 - Wireless connection
-                    6.0 - Enable and configure doas
-                    7.0 - Programs
-                    8.0 - Apache + MariaDB + PHP installation
-                    9.0 - 
-                    
-                                        #Notes
-                            <text> = Commits
-                            text   = Commands
-0.0 - <null>
-
-1.0 - Instalation with xfce4
-
-<Root login>
-su -
-password
-<Add your regular user to the wheel group>
-user mod -G wheel youruser
-<Set PKG_PATH environment variable>
-export PKG_PATH=ftp://ftp.eu.openbsd.org/pub/OpenBSD/6.3/packages/$(uname -m)
-<Install nano text editor>
-pkg_add -Iv nano
-<Open and edit the .profile file>
-nano .profile
-<Add to the file>
-export PKG_PATH=ftp://ftp.eu.openbsd.org/pub/OpenBSD/6.3/packages/$(uname -m)
-
-<<DESKTOP ENVIRONMENT>>
-
-<Install Xfce>
-pkg_add -Iv xfce
-<Install Slim>
-pkg_add -Iv slim slim-themes
-<Open and edit the root user .xinitrc file>
-nano .xinitrc
-<Add to the file>
-exec startxfce4
-<Open and edit your user .xinitrc file>
-nano /home/youruser/.xinitrc
-<Add to the file>
-exec startxfce4
-<Open and edit rc.local>
-nano /etc/rc.local
-<Add to the file>
-/usr/local/bin/slim -d
-<Open and edit rc.conf.local>
-nano /etc/rc.conf.local
-<Add to the file>
-pkg_scripts="dbus_daemon avahi_daemon"
-<Add to the file>
-dbus_enable=YES
-<Install some basic applications>
-pkg_add -Iv (application name packages)
-
-reboot
+|--------------------------------------------------------------------------------|
+|                               #Personal Handbook - Victxrlarixs                |
+|                                                                                |
+|           _.-|-/\-._                                                           |
+|         \-'          '-.                                                       |
+|        /    /\    /\    \/          _____                 ____   _____ _____   |
+|      \/  <    .  >  ./.  \/        / ___ \               |  _ \ / ____|  __ \  |
+|  _   /  <         > /___\ |.      / /  / /___  ___  ____ | |_) | (___ | |  | | |
+|.< \ /  <     /\    > ( #) |#)    / /  / / __ \/ _ \/ __ \|  _ < \___ \| |  | | |
+|  | |    <       /\   -.   __\   / /__/ / /_/ /  __/ / / /| |_) |____) | |__| | |
+|   \   <  <   V      > )./_._(\  \_____/ .___/\___/_/ /_/ |____/|_____/|_____/  |
+|  .)/\   <  <  .-     /  \_'_) )-..   /_/                                       |
+|      \  <   ./  /  > >       /._./                                             |
+|      /\   <  '-' >    >    /                                                   |
+|        '-._ < v    >   _.-'                                                    |
+|          / '-.______.-' \                                     v6.3             |
+|                 \/                                                             |
+|                                                                                |
+|                 # Basic Guide, solve problems, reminders and others            |
+|                                                                                |
+|                                                                           1    |
+|--------------------------------------------------------------------------------|
+|                                                                                |
+|                                      #Content                                  |
+|                                                                                |
+|                   00.0 - Basic instalation                                     |
+|                   01.0 - Instalation with xfce4                                |
+|                   02.0 - Instalation all dependencies xfce4                    | 
+|                   03.0 - Networking using DHCP                                 |
+|                   04.0 - Firmware                                              |
+|                   05.0 - Wireless connection                                   |
+|                   06.0 - Enable and configure doas                             |
+|                   07.0 - Programs                                              |
+|                   08.0 - Apache + MariaDB + PHP installation                   |
+|                   09.0 -                                                       |
+|                   10.0 -                                                       |
+|                                                                                |
+|                                                                           2    |
+|--------------------------------------------------------------------------------|
+|                                                                                |
+|                                        #Notes                                  |
+|                                                                                |
+|                                  <text> = Commits                              |
+|                                  text   = Commands                        3    |
+|--------------------------------------------------------------------------------|
+|                                                                                |
+| 0.0 - <null>                                                                   |             
+|                                                                                |
+|                                                                                |
+|                                                                           4    |
+|--------------------------------------------------------------------------------|
+|                                                                                |
+| 1.0 - Instalation with xfce4                                                   |
+|                                                                                |
+| <Root login>                                                                   |
+| su -                                                                           |
+| password                                                                       |
+| <Add your regular user to the wheel group>                                     |
+| user mod -G wheel youruser                                                     |
+| <Set PKG_PATH environment variable>                                            |
+| export PKG_PATH=ftp://ftp.eu.openbsd.org/pub/OpenBSD/6.3/packages/$(uname -m)  |
+| <Install nano text editor>                                                     |
+| pkg_add -Iv nano                                                               |
+| <Open and edit the .profile file>                                              |
+| nano .profile                                                                  |
+| <Add to the file>                                                              |
+| export PKG_PATH=ftp://ftp.eu.openbsd.org/pub/OpenBSD/6.3/packages/$(uname -m)  |
+|                                                                                | 
+|  <<DESKTOP ENVIRONMENT>>                                                       |
+|                                                                                |
+| <Install Xfce>                                                                 |
+| pkg_add -Iv xfce                                                               |  
+| <Install Slim>                                                                 |
+| pkg_add -Iv slim slim-themes                                                   |
+| <Open and edit the root user .xinitrc file>                                    |
+| nano .xinitrc                                                                  |
+| <Add to the file>                                                              |
+| exec startxfce4                                                                |
+| <Open and edit your user .xinitrc file>                                        |
+| nano /home/youruser/.xinitrc                                                   |
+| <Add to the file>                                                              |
+| exec startxfce4                                                                |
+| <Open and edit rc.local>                                                       |
+| nano /etc/rc.local                                                             |
+| <Add to the file>                                                              |
+| /usr/local/bin/slim -d                                                         |
+| <Open and edit rc.conf.local>                                                  |
+| nano /etc/rc.conf.local                                                        |
+| <Add to the file>                                                              |
+| pkg_scripts="dbus_daemon avahi_daemon"                                         |
+| <Add to the file>                                                              |
+| dbus_enable=YES                                                                |
+| <Install some basic applications>                                              |
+| pkg_add -Iv (application name packages)                                        |
+|                                                                                |
+| reboot                                                                    5    |
+|--------------------------------------------------------------------------------|

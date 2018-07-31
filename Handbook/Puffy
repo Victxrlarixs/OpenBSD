@@ -1,6 +1,6 @@
 |--------------------------------------------------------------------------------|
-|                               #Personal Handbook - Victxrlarixs                |
-|                                                                                |
+|                                #Personal Handbook                              |
+|                               @uthor:Victxrlarixs                              |
 |           _.-|-/\-._                                                           |
 |         \-'          '-.                                                       |
 |        /    /\    /\    \/          _____                 ____   _____ _____   |
@@ -16,7 +16,7 @@
 |          / '-.______.-' \                                     v6.3             |
 |                 \/                                                             |
 |                                                                                |
-|                 # Basic Guide, solve problems, reminders and others            |
+|              # Basic Guide, solve problems, reminders and others               |
 |                                                                                |
 |                                                                           1    |
 |--------------------------------------------------------------------------------|
@@ -46,13 +46,13 @@
 |                                    text = Commands                        3    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
-| 0.0 - <null>                                                                   |             
+| 00.0 - <null>                                                                  |             
 |                                                                                |
 |                                                                                |
 |                                                                           4    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
-| 1.0 - Instalation with xfce4                                                   |
+| 01.0 - Instalation with xfce4                                                  |
 |                                                                                |
 | <Root login>                                                                   |
 | su -                                                                           |
@@ -98,7 +98,7 @@
 | reboot                                                                    5    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
-| 2.0 - Instalation all dependencies xfce4                                       |
+| 02.0 - Instalation all dependencies xfce4                                      |
 |                                                                                |
 |  <<First Command>>                                                             |
 | doas pkg_add -v xfce-4.12p9                                                    |
@@ -125,3 +125,79 @@
 | * thunar plugins (archive, media-tags, thumbnailers and vcs)                   |
 |                                                                           6    |
 |--------------------------------------------------------------------------------|
+|                                                                                |  
+| 03.0 - Networking using DHCP                                                   |
+|                                                                                |
+|  <Print on terminal the interfaces>                                            |
+|  ifconfig                                                                      |
+|  <Select interface and enable>                                                 |
+|  ifconfig (interface) up                                                       |
+|  <Set DHCP for your interface>                                                 |
+|  dhclient (interface)                                                          |
+|  <Edit the next file and configure DHCP>                                       |
+|  /etc/hostname.(interface) >> dhcp                                             |
+|                                                                                |
+|  <<Example "With my interface is athn0>>                                       |
+|  ifconfig athn0 up                                                             |
+|  dhclient athn0                                                                |
+|                                                                           7    |
+|--------------------------------------------------------------------------------|
+|                                                                                |
+| 04.0 - Firmware non-free                                                       |
+|                                                                                |
+| <Command to install and update the firmware packages>                          |
+| fw_update -a                                                                   |
+|                                                                                |
+| *Run fw_update -a automatically install all drivers for your computer          |
+|                                                                           8    |
+|--------------------------------------------------------------------------------|
+|                                                                                | 
+| 05.0 - Wireless connection                                                     |
+|                                                                                |
+| <<Connect wifi using ifconfig>>                                                |
+| <Print on terminal the interfaces>                                             |
+| ifconfig                                                                       |
+| <Select interface and enable>                                                  |
+| ifconfig (interface) up                                                        |
+| <Connect an network>                                                           |
+| ifconfig (interface) nwid (SSID) wpakey (Password)                             |
+|                                                                                |
+| <<Example connect wifi using ifconfig>>                                        |
+| ifconfig athn0                                                                 |
+| ifconfig athn0 nwid MIRED wpakey 4lf4num3r1c0                                  |
+|                                                                                |
+| <<Connect wifi permanent using ifconfig>>                                      |
+| nano /etc/hostname.(interface)                                                 |
+| nwid ACCESS_POINT_NAME                                                         |
+| wpakey THE_SECRET_KEY                                                          |
+| dhcp                                                                           |
+|                                                                                |
+| <<Example connect wifi permanent using ifconfig>>                              |
+| nano /etc/hostname.athn0                                                       |
+| nwid MIRED                                                                     |
+| wpakey 4lf3num3r1c0                                                            |
+| dhcp                                                                           |
+|                                                                           9    |
+|--------------------------------------------------------------------------------|
+|                                                                                | 
+| 06.0 - Enable and configure DOAS                                               |
+|                                                                                |
+| <<Privileges to install packages and execute commands>>                        |
+| <Create and edit file /etc/doas.conf>                                          |
+| permit persist setenv { PKG_CACHE PKG_PATH } (username) cmd pkg_add            | 
+| permit setenv { -ENV PS1=$DOAS_PS1 SSH_AUTH_SOCK } :wheel                      |
+| permit nopass (username) as root cmd /usr/sbin/procmap                         |
+| permit nopass keepenv root as root                                             |
+|                                                                                |
+| *Your user must belong to the group wheel                                      |
+| <Add your user to the group wheel>                                             |
+| user mod -G wheel youruser                                                     |
+|                                                                          10    |     
+|--------------------------------------------------------------------------------|
+|                                                                                |
+| 07.0 -                  
+|                                                                                |
+
+
+
+

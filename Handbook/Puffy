@@ -23,14 +23,14 @@
 |                                                                                |
 |                                      #Content                                  |
 |                                                                                |
-|                   00.0 - Basic instalation                                     |
-|                   01.0 - Instalation with xfce4                                |
-|                   02.0 - Instalation all dependencies xfce4                    | 
+|                   00.0 - Basic installation                                    |
+|                   01.0 - Installation with xfce4                               |
+|                   02.0 - Installation all dependencies xfce4                   | 
 |                   03.0 - Networking using DHCP                                 |
 |                   04.0 - Firmware                                              |
 |                   05.0 - Wireless connection                                   |
 |                   06.0 - Enable and configure doas                             |
-|                   07.0 - Programs                                              |
+|                   07.0 - Packages                                              |
 |                   08.0 - Apache + MariaDB + PHP installation                   |
 |                   09.0 -                                                       |
 |                   10.0 -                                                       |
@@ -52,7 +52,7 @@
 |                                                                           4    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
-| 01.0 - Instalation with xfce4                                                  |
+| 01.0 - Installation with xfce4                                                 |
 |                                                                                |
 | <Root login>                                                                   |
 | su -                                                                           |
@@ -98,7 +98,7 @@
 | reboot                                                                    5    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
-| 02.0 - Instalation all dependencies xfce4                                      |
+| 02.0 - Installation all dependencies xfce4                                     |
 |                                                                                |
 |  <<First Command>>                                                             |
 | doas pkg_add -v xfce-4.12p9                                                    |
@@ -195,9 +195,22 @@
 |                                                                          10    |     
 |--------------------------------------------------------------------------------|
 |                                                                                |
-| 07.0 -                  
+| 07.0 - Packages                                                                |               
 |                                                                                |
-
-
-
+| <<Mirror to install packages (example)>>                                       |
+| export PKG_PATH="http://openbsd.c3sl.ufpr.br/pub/OpenBSD/6.3/packages/amd64/"  |
+|                                                                                |
+| <Install packages>                                                             |
+| pkg_add (packagename)                                                          |
+| <Delete packages>                                                              |
+| pkg_delete (packagename)                                                       |
+| <Information of packages>                                                      |
+| pkg_info                                                                       |
+| <Create an package>                                                            |
+| pkg_create                                                                     |
+|                                                                          11    |
+|--------------------------------------------------------------------------------|
+|                                                                                |
+| 08.0 - Apache + MariaDB + PHP Installation                                     |
+|                                                                                |
 

@@ -62,7 +62,7 @@
 | <Set PKG_PATH environment variable>                                            |
 | export PKG_PATH=ftp://ftp.eu.openbsd.org/pub/OpenBSD/6.3/packages/$(uname -m)  |
 | <Install nano text editor>                                                     |
-| pkg_add -Iv nano                                                               |
+| pkg_add nano                                                               |
 | <Open and edit the .profile file>                                              |
 | nano .profile                                                                  |
 | <Add to the file>                                                              |
@@ -71,9 +71,9 @@
 |  <<DESKTOP ENVIRONMENT>>                                                       |
 |                                                                                |
 | <Install Xfce>                                                                 |
-| pkg_add -Iv xfce                                                               |  
+| pkg_add xfce                                                               |  
 | <Install Slim>                                                                 |
-| pkg_add -Iv slim slim-themes                                                   |
+| pkg_add slim slim-themes                                                   |
 | <Open and edit the root user .xinitrc file>                                    |
 | nano .xinitrc                                                                  |
 | <Add to the file>                                                              |

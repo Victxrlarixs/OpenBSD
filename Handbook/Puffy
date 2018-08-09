@@ -31,7 +31,7 @@
 |                   05.0 - Wireless connection                                   |
 |                   06.0 - Enable and configure doas                             |
 |                   07.0 - Packages                                              |
-|                   08.0 - Apache + MariaDB + PHP installation                   |
+|                   08.0 - OpenBSD +Apache + MariaDB + PHP (O.A.M.P) - Install   |
 |                   09.0 -                                                       |
 |                   10.0 -                                                       |
 |                                                                                |
@@ -213,4 +213,37 @@
 |                                                                                |
 | 08.0 - Apache + MariaDB + PHP Installation                                     |
 |                                                                                |
+| (O.A.M.P) O= OpenBSD                                                           |
+|                                                                                |
+| (O.A.M.P) A= Apache                                                            |
+| <Install Apache>                                                               |
+| pkg_add apache-httpd                                                           |
+| <<Start Apache Server>>                                                        |
+| /etc/rc.d/apache2 start                                                        |
+|                                                                                |
+| (O.A.M.P) M= MysQL/MariaDB                                                     |
+| <Install MySQL>                                                                |
+| pkg_add php-mysql                                                              |
+| <Install MariaDB                                                               |  
+| pkg_add mariadb-client mariadb-server                                          |
+| <finish installation                                                           |
+| mysql_install_db                                                               |
+| <<Start MySQL>>                                                                |
+| /etc/rc.d/mysqld start                                                         |
+|                                                                                |
+| (O.A.M.P) P= PHP                                                               |
+| <<enable php modules>>                                                         |
+| ln -sf /var/www/conf/modules.sample/php-5.6.conf /var/www/conf/modules/php.conf|
+| <<You can enable this module by creating a symbolic link>>                     |
+| /etc/php-5.3.sample/mysql.ini  to /etc/php-5.3/mysql.ini.                      |
+| ln -sf /etc/php-5.6.sample/mysql.ini /etc/php-5.6/mysql.ini                    |
+| <Install phpMyAdmin>  #Optional to database                                    |
+| pkg_add phpMyAdmin                                                             |
+|                                                                          12    |
+|--------------------------------------------------------------------------------|
+|                                                                                |
+| 09.0 -                                                                         |
+
+
+
 

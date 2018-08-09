@@ -32,7 +32,7 @@
 |                   06.0 - Enable and configure doas                             |
 |                   07.0 - Packages                                              |
 |                   08.0 - OpenBSD +Apache + MariaDB + PHP (O.A.M.P) - Install   |
-|                   09.0 -                                                       |
+|                   09.0 - Simple firewalling with packet filter                 |
 |                   10.0 -                                                       |
 |                                                                                |
 |                                                                           2    |
@@ -242,7 +242,8 @@
 |                                                                          12    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
-| 09.0 -                                                                         |
+| 09.0 - Simple firewalling with packet filter                                   |
+|                                                                                |
 
 
 

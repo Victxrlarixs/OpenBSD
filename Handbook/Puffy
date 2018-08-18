@@ -21,29 +21,29 @@
 |                                                                           1    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
-|                                      #Content                                  |
+|                                   #Content                                     |
 |                                                                                |
-|                   00.0 - Basic installation                                    |
-|                   01.0 - Installation with xfce4                               |
-|                   02.0 - Installation all dependencies xfce4                   | 
-|                   03.0 - Networking using DHCP                                 |
-|                   04.0 - Firmware                                              |
-|                   05.0 - Wireless connection                                   |
-|                   06.0 - Enable and configure doas                             |
-|                   07.0 - Packages                                              |
-|                   08.0 - OpenBSD +Apache + MariaDB + PHP (O.A.M.P) - Install   |
-|                   09.0 - Simple firewalling with packet filter                 |
-|                   10.0 -                                                       |
+|               00.0 - Basic installation                                        |
+|               01.0 - Installation with xfce4                                   |
+|               02.0 - Installation all dependencies xfce4                       | 
+|               03.0 - Networking using DHCP                                     |
+|               04.0 - Firmware                                                  |
+|               05.0 - Wireless connection                                       |
+|               06.0 - Enable and configure doas                                 |
+|               07.0 - Packages                                                  |
+|               08.0 - OpenBSD +Apache + MariaDB + PHP (O.A.M.P) - Install       |
+|               09.0 - Simple firewalling with packet filter                     |
+|               10.0 -                                                           |
 |                                                                                |
 |                                                                           2    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
-|                                        #Notes                                  |
+|                                   #Notes                                       |
 |                                                                                |
-|                                       * = Information                          |
-|                                <<text>> = Topic Information                    |                        
-|                                  <text> = Commits                              |
-|                                    text = Commands                        3    |
+|                                 * = Information                                |
+|                          <<text>> = Topic Information                          |                        
+|                            <text> = Commits                                    |
+|                              text = Commands                              3    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
 | 00.0 - <null>                                                                  |             
@@ -244,6 +244,32 @@
 |                                                                                |
 | 09.0 - Simple firewalling with packet filter                                   |
 |                                                                                |
+| <Edit file on /etc/pf.conf>                                                    |
+| doas nano /etc/pf.conf                                                         |        
+| <<We will only allow outgoing traffic FTP SSH SNMP DNS HTTP and PING>>         |
+|                                                                                 |
+| <Add to the file, the follow parameters>                                       |
+| pass out quick on vic0 proto tcp to port 20 # Usado por FTP en modo PASV       |
+| pass out quick on vic0 proto tcp to port 21                                    |
+| pass out quick on vic0 proto tcp to port 22                                    |  
+| pass out quick on vic0 proto tcp to port 25                                    |
+| pass out quick on vic0 proto udp to port 53                                    |
+| pass out quick on vic0 proto tcp to port 80                                    |
+| pass out quick on vic0 proto tcp to port 443                                   |
+| pass out quick inet proto icmp all icmp-type echoreq                           |
+|                                                                                |
+| <Block all exits and entries not allowed>                                      |              
+| block out all                                                                  |
+| block in all                                                                   |
+|                                                                                |
+| <Load the parameters, using pfctl>                                             |
+| pfctl -f /etc/pf.conf                                                          |
+|                                                                          13    |
+|--------------------------------------------------------------------------------|
+
+
+
+
 
 
 

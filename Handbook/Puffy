@@ -23,7 +23,7 @@
 |                                                                                |
 |                                   #Content                                     |
 |                                                                                |
-|               00.0 - Basic installation                                        |
+|               00.0 - Basic installation (After create install media)           |
 |               01.0 - Installation with xfce4                                   |
 |               02.0 - Installation all dependencies xfce4                       | 
 |               03.0 - Networking using DHCP                                     |
@@ -33,7 +33,7 @@
 |               07.0 - Packages                                                  |
 |               08.0 - OpenBSD +Apache + MariaDB + PHP (O.A.M.P) - Install       |
 |               09.0 - Simple firewalling with packet filter                     |
-|               10.0 -                                                           |
+|               10.0 - Untitled (now)                                            |
 |                                                                                |
 |                                                                           2    |
 |--------------------------------------------------------------------------------|
@@ -46,9 +46,11 @@
 |                              text = Commands                              3    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
-| 00.0 - <null>                                                                  |             
+| 00.0 - Basic Installation (After create install media)                         |             
 |                                                                                |
+| <Select (I)nstall Option, after boot>                                          |
 |                                                                                |
+| 
 |                                                                           4    |
 |--------------------------------------------------------------------------------|
 |                                                                                |

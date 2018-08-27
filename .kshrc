@@ -1,5 +1,5 @@
 #!/bin/ksh
-#  Jean-Marc Rosengard
+#  Victxrlarixs
 #  http://w2.syronex.com/jmr/linux/dot-kshrc.html
 # .kshrc
 

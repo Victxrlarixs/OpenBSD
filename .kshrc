@@ -25,7 +25,6 @@ alias x=startx \
 
 # setup prompt
 who=' $ '
-# text color for root is red, black for others
 black="\\033[0;39m"
 red="\\033[0;31m"
 colr=$black

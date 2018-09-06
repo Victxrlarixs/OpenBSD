@@ -221,17 +221,17 @@
 | <Install Apache>                                                               |
 | pkg_add apache-httpd                                                           |
 | <<Start Apache Server>>                                                        |
-| /etc/rc.d/apache2 start                                                        |
+| doas rcctl apache2 start                                                       |
 |                                                                                |
 | (O.A.M.P) M= MysQL/MariaDB                                                     |
 | <Install MySQL>                                                                |
 | pkg_add php-mysql                                                              |
-| <Install MariaDB                                                               |  
+| <Install MariaDB>                                                              |  
 | pkg_add mariadb-client mariadb-server                                          |
 | <finish installation                                                           |
 | mysql_install_db                                                               |
 | <<Start MySQL>>                                                                |
-| /etc/rc.d/mysqld start                                                         |
+| doas rcctl mysqld start                                                        |
 |                                                                                |
 | (O.A.M.P) P= PHP                                                               |
 | <<enable php modules>>                                                         |
@@ -246,18 +246,20 @@
 |                                                                                |
 | 09.0 - Simple firewalling with packet filter                                   |
 |                                                                                |
+| <<First Alternative>>                                                          |
+|                                                                                |
 | <Edit file on /etc/pf.conf>                                                    |
 | doas nano /etc/pf.conf                                                         |        
 | <<We will only allow outgoing traffic FTP SSH SNMP DNS HTTP and PING>>         |
-|                                                                                 |
+|                                                                                |
 | <Add to the file, the follow parameters>                                       |
-| pass out quick on vic0 proto tcp to port 20 # Usado por FTP en modo PASV       |
-| pass out quick on vic0 proto tcp to port 21                                    |
-| pass out quick on vic0 proto tcp to port 22                                    |  
-| pass out quick on vic0 proto tcp to port 25                                    |
-| pass out quick on vic0 proto udp to port 53                                    |
-| pass out quick on vic0 proto tcp to port 80                                    |
-| pass out quick on vic0 proto tcp to port 443                                   |
+| pass out quick on athn0 proto tcp to port 20                                   |
+| pass out quick on athn0 proto tcp to port 21                                   |
+| pass out quick on athn0 proto tcp to port 22                                   |  
+| pass out quick on athn0 proto tcp to port 25                                   |
+| pass out quick on athn0 proto udp to port 53                                   |
+| pass out quick on athn0 proto tcp to port 80                                   |
+| pass out quick on athn0 proto tcp to port 443                                  |
 | pass out quick inet proto icmp all icmp-type echoreq                           |
 |                                                                                |
 | <Block all exits and entries not allowed>                                      |              
@@ -266,6 +268,20 @@
 |                                                                                |
 | <Load the parameters, using pfctl>                                             |
 | pfctl -f /etc/pf.conf                                                          |
+|                                                                                |
+| <<Second Alternative>>                                                         |
+|                                                                                |
+| <Edit file on /etc/pf.conf>                                                    |
+| doas nano /etc/pf.conf                                                         |
+| <<Only protect your laptop, allow only ping/ssh>>                              |
+|                                                                                |
+| <Add to the file, the follow parameters>                                       |
+| set skip on athn0                                                              |
+| set fingerprints "/dev/null"                                                   |
+| block log all                                                                  |
+| pass in on egress inet proto icmp all icmp-type echoreq                        |
+| pass in on egress inet proto tcp from any to any port ssh                      |
+| pass out                                                                       |
 |                                                                          13    |
 |--------------------------------------------------------------------------------|
 

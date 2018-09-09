@@ -1,6 +1,5 @@
 # OpenBSD 
 ```
-Tools, Backups, Handbook's and more
+* Tools
 ```
 
-@[](www.Openbsd.org)

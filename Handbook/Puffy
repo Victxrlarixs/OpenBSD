@@ -31,7 +31,7 @@
 |               05.0 - Wireless connection                                       |
 |               06.0 - Enable and configure doas                                 |
 |               07.0 - Packages                                                  |
-|               08.0 - OpenBSD +Apache + MariaDB + PHP (O.A.M.P) - Install       |
+|               08.0 - HTTPD Minimal Web Server & Apache2                        |
 |               09.0 - Simple firewalling with packet filter                     |
 |               10.0 - Untitled (now)                                            |
 |                                                                                |
@@ -50,7 +50,7 @@
 |                                                                                |
 | <Select (I)nstall Option, after boot>                                          |
 |                                                                                |
-| 
+|                                                                                |
 |                                                                           4    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
@@ -64,7 +64,7 @@
 | <Set PKG_PATH environment variable>                                            |
 | export PKG_PATH=ftp://ftp.eu.openbsd.org/pub/OpenBSD/6.3/packages/$(uname -m)  |
 | <Install nano text editor>                                                     |
-| pkg_add nano                                                               |
+| pkg_add nano                                                                   |
 | <Open and edit the .profile file>                                              |
 | nano .profile                                                                  |
 | <Add to the file>                                                              |
@@ -73,9 +73,9 @@
 |  <<DESKTOP ENVIRONMENT>>                                                       |
 |                                                                                |
 | <Install Xfce>                                                                 |
-| pkg_add xfce                                                               |  
+| pkg_add xfce                                                                   |  
 | <Install Slim>                                                                 |
-| pkg_add slim slim-themes                                                   |
+| pkg_add slim slim-themes                                                       |
 | <Open and edit the root user .xinitrc file>                                    |
 | nano .xinitrc                                                                  |
 | <Add to the file>                                                              |
@@ -213,7 +213,10 @@
 |                                                                          11    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
-| 08.0 - Apache + MariaDB + PHP Installation                                     |
+| 08.0 - HTTPD Minimal Web Server & Apache2                                      |
+|                                                                                | 
+| HTTPD                                                                          |
+| (Development)                                                                  |
 |                                                                                |
 | (O.A.M.P) O= OpenBSD                                                           |
 |                                                                                |
@@ -284,11 +287,3 @@
 | pass out                                                                       |
 |                                                                          13    |
 |--------------------------------------------------------------------------------|
-
-
-
-
- 
-
-
-

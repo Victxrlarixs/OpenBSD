@@ -7,7 +7,6 @@ It is oriented and tested only in version 6.3 of the system.
 _ _ _
 
 ##  Content
-```
-```
-* d
+* Handbook for begginer users:
+  * s 
 *   s

@@ -1,4 +1,4 @@
-# OpenBSD 
+# Puffy Book and more..
 _ _ _
 
 ![OpenBSD](https://www.openbsd.org/art/puffy/puflogh800X199.gif)
@@ -38,4 +38,4 @@ _ _ _
 
 _ _ _
 ## Notes
-* This config file...
+> This config file...

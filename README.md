@@ -10,6 +10,14 @@ It is oriented and tested only in version 6.3 of the system.
 ```
 _ _ _
 
+# Pf (Firewalling)
+
+<img align="left" width="289" height="216" src="https://distrowatch.com/images/other/obsd-blowfish.png">
+
+_ _ _
+## Notes
+* This config file...
+_ _ _
 ##  Content
 * Handbook for begginer users (Puffy Book):
   *  Basic installation
@@ -33,12 +41,4 @@ _ _ _
   *  httpd.conf
   *  hostname.(interface)
 
-_ _ _
-
-# Pf (Firewalling)
-
-<img align="left" width="289" height="216" src="https://distrowatch.com/images/other/obsd-blowfish.png">
-
-_ _ _
-## Notes
-* This config file...
+>Victxrlarixs

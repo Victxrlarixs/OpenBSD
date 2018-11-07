@@ -1,7 +1,7 @@
 # OpenBSD 
 _ _ _
 
-![OpenBSD](https://steemitimages.com/p/2gsjgna1uruvUuS7ndh9YqVwYGPLVszbFLwwpAYXZjh5CFddoZeD9ocTScVh9Btm6fHk1CLZgTpgTJCbr4AwHg1isvyyuWtcqZp7JXqtsoU9RvdGNS?format=match&mode=fit)
+![OpenBSD](https://www.openbsd.org/art/puffy/puflogh800X199.gif)
 
 ```
 This project was developed in order to help the community of users who wish to run OpenBSD.

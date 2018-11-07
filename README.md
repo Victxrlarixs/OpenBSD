@@ -30,3 +30,6 @@ _ _ _
   *  hostname.(interface)
 
 _ _ _
+
+# Notes
+*Soon it will be adapted in its version 6.4 using cwm

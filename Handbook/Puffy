@@ -13,7 +13,7 @@
 |      \  <   ./  /  > >       /._./                                             |
 |      /\   <  '-' >    >    /                                                   |
 |        '-._ < v    >   _.-'                                                    |
-|          / '-.______.-' \                                     v6.3             |
+|          / '-.______.-' \                                     v6.4             |
 |                 \/                                                             |
 |                                                                                |
 |              # Basic Guide, solve problems, reminders and others               |
@@ -62,13 +62,13 @@
 | <Add your regular user to the wheel group>                                     |
 | user mod -G wheel youruser                                                     |
 | <Set PKG_PATH environment variable>                                            |
-| export PKG_PATH=ftp://ftp.eu.openbsd.org/pub/OpenBSD/6.3/packages/$(uname -m)  |
+| export PKG_PATH=ftp://ftp.eu.openbsd.org/pub/OpenBSD/6.4/packages/$(uname -m)  |
 | <Install nano text editor>                                                     |
 | pkg_add nano                                                                   |
 | <Open and edit the .profile file>                                              |
 | nano .profile                                                                  |
 | <Add to the file>                                                              |
-| export PKG_PATH=ftp://ftp.eu.openbsd.org/pub/OpenBSD/6.3/packages/$(uname -m)  |
+| export PKG_PATH=ftp://ftp.eu.openbsd.org/pub/OpenBSD/6.4/packages/$(uname -m)  |
 |                                                                                | 
 |  <<DESKTOP ENVIRONMENT>>                                                       |
 |                                                                                |

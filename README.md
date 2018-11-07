@@ -17,6 +17,8 @@ _ _ _
 _ _ _
 ## Notes
 * This config file...
+
+
 _ _ _
 ##  Content
 * Handbook for begginer users (Puffy Book):

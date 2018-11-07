@@ -34,8 +34,11 @@ _ _ _
   *  hostname.(interface)
 
 _ _ _
+
 #Pf (Firewalling)
-<img align="left" width="100" height="100" src="https://distrowatch.com/images/other/obsd-blowfish.png">
+
+<img align="left" width="289" height="216" src="https://distrowatch.com/images/other/obsd-blowfish.png">
+
 _ _ _
 ## Notes
 *Soon it will be adapted in its version 6.4 using cwm

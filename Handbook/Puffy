@@ -61,14 +61,10 @@
 | password                                                                       |
 | <Add your regular user to the wheel group>                                     |
 | user mod -G wheel youruser                                                     |
-| <Set PKG_PATH environment variable>                                            |
-| export PKG_PATH=ftp://ftp.eu.openbsd.org/pub/OpenBSD/6.4/packages/$(uname -m)  |
 | <Install nano text editor>                                                     |
 | pkg_add nano                                                                   |
 | <Open and edit the .profile file>                                              |
 | nano .profile                                                                  |
-| <Add to the file>                                                              |
-| export PKG_PATH=ftp://ftp.eu.openbsd.org/pub/OpenBSD/6.4/packages/$(uname -m)  |
 |                                                                                | 
 |  <<DESKTOP ENVIRONMENT>>                                                       |
 |                                                                                |
@@ -200,7 +196,7 @@
 | 07.0 - Packages                                                                |               
 |                                                                                |
 | <<Mirror to install packages (example)>>                                       |
-| export PKG_PATH="http://openbsd.c3sl.ufpr.br/pub/OpenBSD/6.3/packages/amd64/"  |
+| export PKG_PATH="http://openbsd.c3sl.ufpr.br/pub/OpenBSD/6.4/packages/amd64/"  |
 |                                                                                |
 | <Install packages>                                                             |
 | pkg_add (packagename)                                                          |

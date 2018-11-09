@@ -60,7 +60,7 @@
 | su -                                                                           |
 | password                                                                       |
 | <Add your regular user to the wheel group>                                     |
-| user mod -G wheel youruser                                                     |
+| user mod -G staff username                                                     |
 | <Install nano text editor>                                                     |
 | pkg_add nano                                                                   |
 | <Open and edit the .profile file>                                              |
@@ -183,13 +183,13 @@
 | <<Privileges to install packages and execute commands>>                        |
 | <Create and edit file /etc/doas.conf>                                          |
 | permit persist setenv { PKG_CACHE PKG_PATH } (username) cmd pkg_add            | 
-| permit setenv { -ENV PS1=$DOAS_PS1 SSH_AUTH_SOCK } :wheel                      |
+| permit setenv { -ENV PS1=$DOAS_PS1 SSH_AUTH_SOCK } :staff                      |
 | permit nopass (username) as root cmd /usr/sbin/procmap                         |
 | permit nopass keepenv root as root                                             |
 |                                                                                |
 | *Your user must belong to the group wheel                                      |
 | <Add your user to the group wheel>                                             |
-| user mod -G wheel youruser                                                     |
+| user mod -G staff youruser                                                     |
 |                                                                          10    |     
 |--------------------------------------------------------------------------------|
 |                                                                                |

@@ -59,7 +59,7 @@
 | <Root login>                                                                   |
 | su -                                                                           |
 | password                                                                       |
-| <Add your regular user to the wheel group>                                     |
+| <Add your regular user to staff group>                                         |
 | user mod -G staff username                                                     |
 | <Install nano text editor>                                                     |
 | pkg_add nano                                                                   |
@@ -91,7 +91,7 @@
 | <Add to the file>                                                              |
 | dbus_enable=YES                                                                |
 | <Install some basic applications>                                              |
-| pkg_add -Iv (application name packages)                                        |
+| pkg_add  (application name packages, check pots.su)                            |
 |                                                                                |
 | reboot                                                                    5    |
 |--------------------------------------------------------------------------------|
@@ -99,7 +99,7 @@
 | 02.0 - Installation all dependencies xfce4                                     |
 |                                                                                |
 |  <<First Command>>                                                             |
-| doas pkg_add -v xfce-4.12p9                                                    |
+| doas pkg_add xfce-4.12p9                                                       |
 |                                                                                |  
 |  <<Package Info>>                                                              |
 | <The Xfce Desktop Environment, base installation. Contains core Xfce plus:>    |

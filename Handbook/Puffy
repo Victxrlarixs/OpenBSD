@@ -206,6 +206,8 @@
 | pkg_info                                                                       |
 | <Create an package>                                                            |
 | pkg_create                                                                     |
+| <Install package manager>                                                      |
+| pkg_add pkg_mngr                                                               |
 |                                                                          11    |
 |--------------------------------------------------------------------------------|
 |                                                                                |

@@ -32,7 +32,7 @@ _ _ _
   *  httpd.conf
   *  hostname.(interface)
 _ _ _
-# Pf (Firewalling)
+# Firewalling (Packet Filter)
 
 <img align="left" width="289" height="216" src="https://distrowatch.com/images/other/obsd-blowfish.png">
 

@@ -1,4 +1,4 @@
-# Puffy Book and more..
+# Puffy Book, dot files, and more..
 _ _ _
 
 ![OpenBSD](https://www.openbsd.org/art/puffy/puflogh800X199.gif)

@@ -62,9 +62,7 @@
 | <Add your regular user to staff group>                                         |
 | user mod -G staff username                                                     |
 | <Install nano text editor>                                                     |
-| pkg_add nano                                                                   |
-| <Open and edit the .profile file>                                              |
-| nano .profile                                                                  |
+| pkg_add nano                                                                   |                                                              |
 |                                                                                | 
 |  <<DESKTOP ENVIRONMENT>>                                                       |
 |                                                                                |
@@ -91,7 +89,7 @@
 | <Add to the file>                                                              |
 | dbus_enable=YES                                                                |
 | <Install some basic applications>                                              |
-| pkg_add  (application name packages, check pots.su)                            |
+| pkg_add  (application name packages, check ports.su)                           |
 |                                                                                |
 | reboot                                                                    5    |
 |--------------------------------------------------------------------------------|
@@ -135,7 +133,7 @@
 |  <Edit the next file and configure DHCP>                                       |
 |  /etc/hostname.(interface) >> dhcp                                             |
 |                                                                                |
-|  <<Example "With my interface is athn0>>                                       |
+|  <<Example "My interface is athn0>>                                            |
 |  ifconfig athn0 up                                                             |
 |  dhclient athn0                                                                |
 |                                                                           7    |
@@ -158,20 +156,14 @@
 | <Select interface and enable>                                                  |
 | ifconfig (interface) up                                                        |
 | <Connect an network>                                                           |
-| ifconfig (interface) nwid (SSID) wpakey (Password)                             |
+| ifconfig (interface) nwid (SSID) wpakey (Password wpa)                         |
 |                                                                                |
 | <<Example connect wifi using ifconfig>>                                        |
 | ifconfig athn0                                                                 |
 | ifconfig athn0 nwid MIRED wpakey 4lf4num3r1c0                                  |
 |                                                                                |
-| <<Connect wifi permanent using ifconfig>>                                      |
-| nano /etc/hostname.(interface)                                                 |
-| nwid ACCESS_POINT_NAME                                                         |
-| wpakey THE_SECRET_KEY                                                          |
-| dhcp                                                                           |
-|                                                                                |
 | <<Example connect wifi permanent using ifconfig>>                              |
-| nano /etc/hostname.athn0                                                       |
+| nano /etc/hostname.(interface, example urtwn0                                  |
 | nwid MIRED                                                                     |
 | wpakey 4lf3num3r1c0                                                            |
 | dhcp                                                                           |
@@ -195,7 +187,7 @@
 |                                                                                |
 | 07.0 - Packages                                                                |               
 |                                                                                |
-| <<Mirror to install packages (example)>>                                       |
+| <<Mirror to install packages (example, not necesary)>>                         |
 | export PKG_PATH="http://openbsd.c3sl.ufpr.br/pub/OpenBSD/6.4/packages/amd64/"  |
 |                                                                                |
 | <Install packages>                                                             |

@@ -224,7 +224,7 @@
 | <finish installation                                                           |
 | mysql_install_db                                                               |
 | <<Start MySQL>>                                                                |
-| doas rcctl mysqld start                                                        |
+| doas rcctl start mysqld                                                        |
 |                                                                                |
 | (O.A.M.P) P= PHP                                                               |
 | <<enable php modules>>                                                         |

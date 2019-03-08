@@ -214,7 +214,7 @@
 | <Install Apache>                                                               |
 | pkg_add apache-httpd                                                           |
 | <<Start Apache Server>>                                                        |
-| doas rcctl apache2 start                                                       |
+| doas rcctl start apache2                                                       |
 |                                                                                |
 | (O.A.M.P) M= MysQL/MariaDB                                                     |
 | <Install MySQL>                                                                |

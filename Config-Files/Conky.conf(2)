@@ -1,0 +1,44 @@
+#  Conky Config - OpenBSD  
+#---------------------------------------------------
+
+background no
+use_xft yes
+xftfont neoxis:size=7
+xftalpha 1
+text_buffer_size 50000
+update_interval 0.50
+total_run_times 0
+own_window yes
+own_window_transparent no
+own_window_type override
+#own_window_colour 11821
+own_window_colour 611821
+#own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color 789922
+default_shade_color black
+#default_outline_color white
+gap_x 0
+gap_y 5
+no_buffers yes
+uppercase no
+cpu_avg_samples 10
+override_utf8_locale yes
+#temperature_unit celsius
+#alignment bottom_center
+alignment top_right
+minimum_size 1366 1
+short_units yes
+pad_percents 1
+top_name_width 1
+
+
+
+#  Output 
+#-----------------------------------------------------
+TEXT
+${alignc} ${color 9db270}OpenBSD 5.6${color 9c77b2} * ${color 7086b2}Machine:${color b26f7a}$nodename${color 9c77b2} * ${color 7086b2}Uptime:${color 8c8b8b}$uptime${color 9c77b2} * ${color 7086b2}Cpu0:${color 8c8b8b}${cpu cpu0 0, 80}${color 8c8b8b}%${color 7086b2} Cpu1:${color 8c8b8b}${cpu cpu1 0, 80}${color 8c8b8b}%${color 7086b2} Cpu2:${color 8c8b8b}${cpu cpu2 0, 80}${color 8c8b8b}%${color 7086b2} Cpu3:${color 8c8b8b}${cpu cpu3 0, 80}${color 8c8b8b}%${color 9c77b2} * ${color 7086b2}Ram:${color 8c8b8b}${execi 3 top -1 1 | awk '/Real:/ {print $3}' | sed 's/M.*//'}/${memmax}${color 9c77b2} * ${color 7086b2}Title:${color b26f7a}${mpd_title}${color 9c77b2} * ${color 7086b2}Artist:${color b26f7a}${mpd_artist}${color 9c77b2} * ${color 7086b2}Album:${color b26f7a}${mpd_album}${color 9c77b2} * ${color 8c8b8b}${time %I:%M %p}${color 9db270} ${time %A, %b %d %Y} ${color}

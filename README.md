@@ -10,7 +10,7 @@ It is oriented and tested only in version 6.4 of the system.
 ```
 _ _ _
 ##  Content
-* Handbook for begginer users (Puffy Book):
+* Handbook for begginer users (Puffy Book)
   *  Basic installation
   *  Installation with xfce4
   *  Installation all dependencies xfce4-extras
@@ -26,7 +26,7 @@ _ _ _
   *  CSS File 
   *  Images Folder
 * Config Files
-  *  doas.conf
+  *  doas.conf 
   *  .kshrc
   *  pf.conf
   *  httpd.conf

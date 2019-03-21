@@ -274,6 +274,6 @@
 | block log all                                                                  |
 | pass in on egress inet proto icmp all icmp-type echoreq                        |
 | pass in on egress inet proto tcp from any to any port ssh                      |
-| pass out                                                                       |
+| pass out                                                                        |
 |                                                                          13    |
 |--------------------------------------------------------------------------------|

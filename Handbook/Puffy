@@ -25,15 +25,14 @@
 |                                                                                |
 |               00.0 - Basic installation (After create install media)           |
 |               01.0 - Installation with xfce4                                   |
-|               02.0 - Installation all dependencies xfce4                       | 
-|               03.0 - Networking using DHCP                                     |
-|               04.0 - Firmware                                                  |
-|               05.0 - Wireless connection                                       |
-|               06.0 - Enable and configure doas                                 |
-|               07.0 - Packages                                                  |
-|               08.0 - HTTPD Minimal Web Server & Apache2                        |
-|               09.0 - Simple firewalling with packet filter                     |
-|               10.0 - Untitled (now)                                            |
+|               02.0 - Networking using DHCP                                     |
+|               03.0 - Firmware                                                  |
+|               04.0 - Wireless connection                                       |
+|               05.0 - Enable and configure doas                                 |
+|               06.0 - Packages                                                  |
+|               07.0 - HTTPD Minimal Web Server & Apache2                        |
+|               08.0 - Simple firewalling with packet filter                     |
+|               09.0 - Untitled (now)                                            |
 |                                                                                |
 |                                                                           2    |
 |--------------------------------------------------------------------------------|
@@ -66,10 +65,8 @@
 |                                                                                | 
 |  <<DESKTOP ENVIRONMENT>>                                                       |
 |                                                                                |
-| <Install Xfce>                                                                 |
-| pkg_add xfce                                                                   |  
-| <Install Slim>                                                                 |
-| pkg_add slim slim-themes                                                       |
+| <Install Xfce, slim, xscreensaver>                                             |
+| pkg_add xfce  xfce-extras slim slim-themes xscreensaver                        |                                                       |
 | <Open and edit the root user .xinitrc file>                                    |
 | nano .xinitrc                                                                  |
 | <Add to the file>                                                              |
@@ -93,36 +90,8 @@
 |                                                                                |
 | reboot                                                                    5    |
 |--------------------------------------------------------------------------------|
-|                                                                                |
-| 02.0 - Installation all dependencies xfce4                                     |
-|                                                                                |
-|  <<First Command>>                                                             |
-| doas pkg_add xfce-4.12p9                                                       |
 |                                                                                |  
-|  <<Package Info>>                                                              |
-| <The Xfce Desktop Environment, base installation. Contains core Xfce plus:>    |
-| * theme packages                                                               |
-| * a terminal (xfce4-terminal)                                                  |
-| * a calendar (orage)                                                           |
-| * an image viewer (ristretto)                                                  |
-| * a text editor (mousepad)                                                     |
-| * a sound mixer (xfce4-mixer)                                                  |
-| * a thumbnailer service used by thunar (tumbler)                               |
-| * an application finder (xfce4-appfinder)                                      |
-|                                                                                |
-|  <<Second command>>                                                            |
-| doas pkg_add -v xfce-extras-4.12p1                                             |
-|                                                                                |
-|  <<Package Info>>                                                              |
-| <The Xfce Desktop Environment, full installation. Contains base Xfce plus:>    |
-| * a media player (parole)                                                      |
-| * an mpc client (xfmpc)                                                        |
-| * a lot of panel plugins                                                       |
-| * thunar plugins (archive, media-tags, thumbnailers and vcs)                   |
-|                                                                           6    |
-|--------------------------------------------------------------------------------|
-|                                                                                |  
-| 03.0 - Networking using DHCP                                                   |
+| 02.0 - Networking using DHCP                                                   |
 |                                                                                |
 |  <Print on terminal the interfaces>                                            |
 |  ifconfig                                                                      |
@@ -139,7 +108,7 @@
 |                                                                           7    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
-| 04.0 - Firmware non-free                                                       |
+| 03.0 - Firmware non-free                                                       |
 |                                                                                |
 | <Command to install and update the firmware packages>                          |
 | fw_update -a                                                                   |
@@ -148,7 +117,7 @@
 |                                                                           8    |
 |--------------------------------------------------------------------------------|
 |                                                                                | 
-| 05.0 - Wireless connection                                                     |
+| 04.0 - Wireless connection                                                     |
 |                                                                                |
 | <<Connect wifi using ifconfig>>                                                |
 | <Print on terminal the interfaces>                                             |
@@ -170,7 +139,7 @@
 |                                                                           9    |
 |--------------------------------------------------------------------------------|
 |                                                                                | 
-| 06.0 - Enable and configure DOAS                                               |
+| 05.0 - Enable and configure DOAS                                               |
 |                                                                                |
 | <<Privileges to install packages and execute commands>>                        |
 | <Create and edit file /etc/doas.conf>                                          |
@@ -185,7 +154,7 @@
 |                                                                          10    |     
 |--------------------------------------------------------------------------------|
 |                                                                                |
-| 07.0 - Packages                                                                |               
+| 06.0 - Packages                                                                |               
 |                                                                                |
 | <<Mirror to install packages (example, not necesary)>>                         |
 | export PKG_PATH="http://openbsd.c3sl.ufpr.br/pub/OpenBSD/6.4/packages/amd64/"  |
@@ -203,7 +172,7 @@
 |                                                                          11    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
-| 08.0 - HTTPD Minimal Web Server & Apache2                                      |
+| 07.0 - HTTPD Minimal Web Server & Apache2                                      |
 |                                                                                | 
 | HTTPD                                                                          |
 | (Development)                                                                  |
@@ -237,7 +206,7 @@
 |                                                                          12    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
-| 09.0 - Simple firewalling with packet filter                                   |
+| 08.0 - Simple firewalling with packet filter                                   |
 |                                                                                |
 | <<First Alternative>>                                                          |
 |                                                                                |

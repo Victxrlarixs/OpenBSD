@@ -172,30 +172,31 @@
 |                                                                          11    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
-| 07.0 - HTTPD Minimal Web Server & Apache2                                      |
+| 07.0 - HTTPD Minimal Web Server                                                |
 |                                                                                | 
 | HTTPD                                                                          |
 | (Development)                                                                  |
 |                                                                                |
 | (O.A.M.P) O= OpenBSD                                                           |
 |                                                                                |
-| (O.A.M.P) A= Apache                                                            |
+| A= Apache                                                                      |
+|                                                                                |
 | <Install Apache>                                                               |
 | pkg_add apache-httpd                                                           |
 | <<Start Apache Server>>                                                        |
 | doas rcctl start apache2                                                       |
 |                                                                                |
-| (O.A.M.P) M= MysQL/MariaDB                                                     |
-| <Install MySQL>                                                                |
-| pkg_add php-mysql                                                              |
+| M= MysQL/MariaDB                                                               |
+|                                                                                |
 | <Install MariaDB>                                                              |  
-| pkg_add mariadb-client mariadb-server                                          |
+| pkg_add mariadb-server                                                         |
 | <finish installation                                                           |
 | mysql_install_db                                                               |
 | <<Start MySQL>>                                                                |
 | doas rcctl start mysqld                                                        |
 |                                                                                |
 | (O.A.M.P) P= PHP                                                               |
+|                                                                                |
 | <<enable php modules>>                                                         |
 | ln -sf /var/www/conf/modules.sample/php-5.6.conf /var/www/conf/modules/php.conf|
 | <<You can enable this module by creating a symbolic link>>                     |

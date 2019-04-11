@@ -1,6 +1,6 @@
 |--------------------------------------------------------------------------------|
 |                                #Personal Handbook                              |
-|                               @uthor:Victxrlarixs                              |
+|                                                                                |
 |           _.-|-/\-._                                                           |
 |         \-'          '-.                                                       |
 |        /    /\    /\    \/          _____                 ____   _____ _____   |
@@ -197,6 +197,7 @@
 |                                                                                |
 | (O.A.M.P) P= PHP                                                               |
 |                                                                                |
+| <Install Php                                                                   |
 | <<enable php modules>>                                                         |
 | ln -sf /var/www/conf/modules.sample/php-5.6.conf /var/www/conf/modules/php.conf|
 | <<You can enable this module by creating a symbolic link>>                     |
@@ -244,6 +245,6 @@
 | block log all                                                                  |
 | pass in on egress inet proto icmp all icmp-type echoreq                        |
 | pass in on egress inet proto tcp from any to any port ssh                      |
-| pass out                                                                        |
+| pass out                                                                       |
 |                                                                          13    |
 |--------------------------------------------------------------------------------|

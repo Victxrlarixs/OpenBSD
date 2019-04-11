@@ -13,7 +13,6 @@ _ _ _
 * Handbook for begginer users (Puffy Book)
   *  Basic installation
   *  Installation with xfce4
-  *  Installation all dependencies xfce4-extras
   *  Networking using DHCP
   *  Firmware
   *  Wireless Connection

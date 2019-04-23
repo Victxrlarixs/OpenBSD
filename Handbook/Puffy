@@ -30,9 +30,9 @@
 |               04.0 - Wireless connection                                       |
 |               05.0 - Enable and configure doas                                 |
 |               06.0 - Packages                                                  |
-|               07.0 - HTTPD Minimal Web Server & Apache2                        |
+|               07.0 - Minimal Web Server Httpd or Apache2                       |
 |               08.0 - Simple firewalling with packet filter                     |
-|               09.0 - Untitled (now)                                            |
+|               09.0 - .......... (now)                                          |
 |                                                                                |
 |                                                                           2    |
 |--------------------------------------------------------------------------------|
@@ -160,19 +160,19 @@
 | export PKG_PATH="http://openbsd.c3sl.ufpr.br/pub/OpenBSD/6.4/packages/amd64/"  |
 |                                                                                |
 | <Install packages>                                                             |
-| pkg_add (packagename)                                                          |
+| doas pkg_add (packagename)                                                     |
 | <Delete packages>                                                              |
-| pkg_delete (packagename)                                                       |
+| doas pkg_delete (packagename)                                                  |
 | <Information of packages>                                                      |
-| pkg_info                                                                       |
+| doas pkg_info                                                                  |
 | <Create an package>                                                            |
-| pkg_create                                                                     |
+| doas pkg_create                                                                |
 | <Install package manager>                                                      |
-| pkg_add pkg_mngr                                                               |
+| doas pkg_add pkg_mngr                                                          |
 |                                                                          11    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
-| 07.0 - HTTPD Minimal Web Server                                                |
+| 07.0 - Minimal Web Server   (HTTPD or Apache2)                                 |
 |                                                                                | 
 | HTTPD                                                                          |
 | (Development)                                                                  |
@@ -182,29 +182,35 @@
 | A= Apache                                                                      |
 |                                                                                |
 | <Install Apache>                                                               |
-| pkg_add apache-httpd                                                           |
+| doas pkg_add apache-httpd                                                      |
 | <<Start Apache Server>>                                                        |
 | doas rcctl start apache2                                                       |
 |                                                                                |
 | M= MysQL/MariaDB                                                               |
 |                                                                                |
-| <Install MariaDB>                                                              |  
-| pkg_add mariadb-server                                                         |
-| <finish installation                                                           |
+| <Install MariaDB "package">                                                    |  
+| doas pkg_add mariadb-server                                                    |
+| <Install DB>                                                                   |
 | mysql_install_db                                                               |
+| <Finish install>                                                               |
+| mysql_secure_installation                                                      |
 | <<Start MySQL>>                                                                |
 | doas rcctl start mysqld                                                        |
 |                                                                                |
 | (O.A.M.P) P= PHP                                                               |
 |                                                                                |
-| <Install Php                                                                   |
+| <Install Php>                                                                  |
+| doas pkg_add php php-msql                                                      |
 | <<enable php modules>>                                                         |
-| ln -sf /var/www/conf/modules.sample/php-5.6.conf /var/www/conf/modules/php.conf|
+| ln -sf /var/www/conf/modules.sample/php-7.2.conf /var/www/conf/modules/php.conf|
 | <<You can enable this module by creating a symbolic link>>                     |
-| /etc/php-5.3.sample/mysql.ini  to /etc/php-5.3/mysql.ini.                      |
-| ln -sf /etc/php-5.6.sample/mysql.ini /etc/php-5.6/mysql.ini                    |
+| /etc/php-7.2.sample/mysql.ini  to /etc/php-7.2/mysql.ini.                      |
+| ln -sf /etc/php-7.2.sample/mysql.ini /etc/php-7.2/mysql.ini                    |
 | <Install phpMyAdmin>  #Optional to database                                    |
-| pkg_add phpMyAdmin                                                             |
+| doas pkg_add phpMyAdmin                                                        |
+| <Info php modules on your web server                                           |
+| <Create a phpinfo.php file inside /var/www/htdocs/ directory>                  |
+| doas nano /var/www/htdocs/info.php >> <?php phpinfo();  ?>                     |
 |                                                                          12    |
 |--------------------------------------------------------------------------------|
 |                                                                                |
@@ -231,7 +237,7 @@
 | block in all                                                                   |
 |                                                                                |
 | <Load the parameters, using pfctl>                                             |
-| pfctl -f /etc/pf.conf                                                          |
+| doas pfctl -f /etc/pf.conf                                                     |
 |                                                                                |
 | <<Second Alternative>>                                                         |
 |                                                                                |

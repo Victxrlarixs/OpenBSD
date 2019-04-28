@@ -13,7 +13,7 @@
 |      \  <   ./  /  > >       /._./                                             |
 |      /\   <  '-' >    >    /                                                   |
 |        '-._ < v    >   _.-'                                                    |
-|          / '-.______.-' \                                     v6.4             |
+|          / '-.______.-' \                                     v6.5             |
 |                 \/                                                             |
 |                                                                                |
 |              # Basic Guide, solve problems, reminders and others               |
@@ -157,7 +157,7 @@
 | 06.0 - Packages                                                                |               
 |                                                                                |
 | <<Mirror to install packages (example, not necesary)>>                         |
-| export PKG_PATH="http://openbsd.c3sl.ufpr.br/pub/OpenBSD/6.4/packages/amd64/"  |
+| export PKG_PATH="http://openbsd.c3sl.ufpr.br/pub/OpenBSD/6.5/packages/amd64/"  |
 |                                                                                |
 | <Install packages>                                                             |
 | doas pkg_add (packagename)                                                     |

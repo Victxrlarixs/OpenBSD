@@ -58,8 +58,8 @@
 | <Root login>                                                                   |
 | su -                                                                           |
 | password                                                                       |
-| <Add your regular user to staff group>                                         |
-| user mod -G staff username                                                     |
+| <Add your regular user to wheel group>                                         |
+| user mod -G wheel username                                                     |
 | <Install nano text editor>                                                     |
 | pkg_add nano                                                                   |                                                              |
 |                                                                                | 
@@ -150,7 +150,7 @@
 |                                                                                |
 | *Your user must belong to the group wheel                                      |
 | <Add your user to the group wheel>                                             |
-| user mod -G staff youruser                                                     |
+| user mod -G wheel youruser                                                     |
 |                                                                          10    |     
 |--------------------------------------------------------------------------------|
 |                                                                                |
@@ -202,10 +202,10 @@
 | <Install Php>                                                                  |
 | doas pkg_add php php-msql                                                      |
 | <<enable php modules>>                                                         |
-| ln -sf /var/www/conf/modules.sample/php-7.2.conf /var/www/conf/modules/php.conf|
+| ln -sf /var/www/conf/modules.sample/php-5.2.conf /var/www/conf/modules/php.conf|
 | <<You can enable this module by creating a symbolic link>>                     |
-| /etc/php-7.2.sample/mysql.ini  to /etc/php-7.2/mysql.ini.                      |
-| ln -sf /etc/php-7.2.sample/mysql.ini /etc/php-7.2/mysql.ini                    |
+| /etc/php-5.2.sample/mysql.ini  to /etc/php-5.2/mysql.ini.                      |
+| ln -sf /etc/php-5.2.sample/mysql.ini /etc/php-5.2/mysql.ini                    |
 | <Install phpMyAdmin>  #Optional to database                                    |
 | doas pkg_add phpMyAdmin                                                        |
 | <Info php modules on your web server                                           |

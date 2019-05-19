@@ -129,7 +129,7 @@
 |                                                                                |
 | <<Example connect wifi using ifconfig>>                                        |
 | ifconfig athn0                                                                 |
-| ifconfig athn0 nwid MIRED wpakey 4lf4num3r1c0                                  |
+| ifconfig athn0 nwid SSID wpakey 4lf4num3r1c0                                   |
 |                                                                                |
 | <<Example connect wifi permanent using ifconfig>>                              |
 | nano /etc/hostname.(interface, example urtwn0                                  |
@@ -144,7 +144,7 @@
 | <<Privileges to install packages and execute commands>>                        |
 | <Create and edit file /etc/doas.conf>                                          |
 | permit persist setenv { PKG_CACHE PKG_PATH } (username) cmd pkg_add            | 
-| permit setenv { -ENV PS1=$DOAS_PS1 SSH_AUTH_SOCK } :staff                      |
+| permit setenv { -ENV PS1=$DOAS_PS1 SSH_AUTH_SOCK } :wheel                      |
 | permit nopass (username) as root cmd /usr/sbin/procmap                         |
 | permit nopass keepenv root as root                                             |
 |                                                                                |

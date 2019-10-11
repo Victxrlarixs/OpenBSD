@@ -3,3 +3,11 @@ configuration, and use a PSK (pre-shared-key) for authentication. I’m sure it 
 platforms that OpenIKED is available on, but keep in mind my steps are specifically for OpenBSD.
 
 
+ipsec01 as the gateway
+web01 as the first Linux host
+web02 as the second Linux host
+
+
+default will only allow inbound SSH
+web will allow TCP ports 80 and 443 for web01 and web02.
+ipsec should allow ESP protocol as well as UDP ports 500 and 4500 for ipsec01.

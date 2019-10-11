@@ -31,6 +31,9 @@ _ _ _
   *  pf.conf
   *  httpd.conf
   *  hostname.(interface)
+* VMM & VMD
+  * Files for building 
+  * Command Logs for start VM
 _ _ _
 # Firewalling (Packet Filter)
 

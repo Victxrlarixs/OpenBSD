@@ -1,4 +1,4 @@
 apmd_flags="-A"
-dhcpd_flags=vether0
+dhcpd_flags=athn0
 vmd_flags=
 ntpd_flags="-s"

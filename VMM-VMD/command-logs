@@ -1,0 +1,9 @@
+#Start vmm from Command Line
+
+vmmctl status
+
+vmctl console 1
+cu /dev/ttyp0
+
+vmctl create /vmm/vm1.img -s 500M
+vmctl start -c -b /bsd.rd -m 512M -i 1 -d /vmm/vm1.img

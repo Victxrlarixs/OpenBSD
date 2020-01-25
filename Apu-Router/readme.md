@@ -1157,7 +1157,7 @@ $ sudo reboot
 
 See also [Debian SSD Optimizations](https://wiki.debian.org/SSDOptimization).
 
-# Similar work
+# Similar works
 
 * [elad/openbsd-apu2](https://github.com/elad/openbsd-apu2)
 * [martinbaillie/homebrew-openbsd-pcengines-router](https://github.com/martinbaillie/homebrew-openbsd-pcengines-router)

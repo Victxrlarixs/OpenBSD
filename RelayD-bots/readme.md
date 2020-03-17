@@ -6,6 +6,7 @@ If you are using OpenBSD to add security headers to your website, it is only nat
 to block the bad robot crawlers out there that just hammer your website in the hope that 
 you visit the bot’s web page and purchase their services; because there’s nothing like (sic) 
 getting people to your website like doing nefarious things.
+
 ```
 _ _ _ 
 ```

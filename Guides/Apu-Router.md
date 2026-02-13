@@ -213,7 +213,7 @@ Use another computer to prepare an installer for either OpenBSD or Debian.
 
 ## OpenBSD
 
-Download the installation image - [`amd64/install66.fs`](https://cdn.openbsd.org/pub/OpenBSD/6.6/amd64/install66.fs) - as well as [`SHA256`](https://cdn.openbsd.org/pub/OpenBSD/6.6/amd64/SHA256) and [`SHA256.sig`](https://cdn.openbsd.org/pub/OpenBSD/6.6/amd64/SHA256.sig) files.
+Download the installation image (Example OpenBSD 6.6) - [`amd64/install66.fs`](https://cdn.openbsd.org/pub/OpenBSD/6.6/amd64/install66.fs) - as well as [`SHA256`](https://cdn.openbsd.org/pub/OpenBSD/6.6/amd64/SHA256) and [`SHA256.sig`](https://cdn.openbsd.org/pub/OpenBSD/6.6/amd64/SHA256.sig) files.
 
 Verify the signatures file and hash of the installation image:
 
@@ -243,7 +243,7 @@ $ sudo dd if=install66.fs of=/dev/sdd bs=1M
 
 ## Debian
 
-Download the network installation image - [`debian-10.2.0-amd64-netinst.iso`](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/) - as well as [`SHA512SUMS`](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA512SUMS) and [`SHA512SUMS.sign`](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA512SUMS.sign) files.
+Download the network installation image (Example Debian 10.2.0) - [`debian-10.2.0-amd64-netinst.iso`](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/) - as well as [`SHA512SUMS`](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA512SUMS) and [`SHA512SUMS.sign`](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/SHA512SUMS.sign) files.
 
 Verify the signatures file and hash of the installation image:
 
@@ -1162,4 +1162,3 @@ See also [Debian SSD Optimizations](https://wiki.debian.org/SSDOptimization).
 * [elad/openbsd-apu2](https://github.com/elad/openbsd-apu2)
 * [martinbaillie/homebrew-openbsd-pcengines-router](https://github.com/martinbaillie/homebrew-openbsd-pcengines-router)
 * [northox/openbsd-apu2](https://github.com/northox/openbsd-apu2)
-

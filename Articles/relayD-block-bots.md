@@ -1,4 +1,5 @@
-# Intro
+# Using openbsd relayd to block bad robots
+
 
 ```
 
@@ -108,4 +109,4 @@ This will ensure that your rule matches no matter where the bot name appears in 
 Enjoy log silence from the bad robots.
 ```
 
-@author: https://goblackcat.com/posts/using-openbsd-relayd-to-block-bad-robots/
+@author: 

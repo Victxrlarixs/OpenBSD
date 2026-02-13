@@ -1,4 +1,4 @@
-# Intro
+# Using openbsd relayd to add security headers
 
 ```
 My website automatically redirects users from http to https and this gets achieved using a simple 
@@ -116,4 +116,4 @@ Once you do this, check your website at securityheaders.com. This setting will g
 The only thing I have yet to figure out is the Content Security Policy header.
 ```
 
-@author: https://goblackcat.com/posts/using-openbsd-relayd-to-add-security-headers/
+@author: 

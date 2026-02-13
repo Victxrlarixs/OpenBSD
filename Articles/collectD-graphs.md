@@ -1,8 +1,8 @@
-# Intro
+# Pretty graphs with CollectD
 
 ```
 In a “get pretty graphs” mood, I’m looking at what can be done regarding OpenBSD monitoring using the CollectD 
-collector and Grafana dashboard renderer. OpenBSD 6.2-current provides InfluxDB and Grafana packages. 
+collector and Grafana dashboard renderer. OpenBSD 6.x-current provides InfluxDB and Grafana packages. 
 A great stack for pretty reportings.
 ```
 _ _ _ 
@@ -60,7 +60,6 @@ udp 0 0 *.25826 *.*
 
 ```
 Browse to http://localhost:3000/ and log in using the default credentials (admin:admin). 
-Those can be changed this way http://docs.grafana.org/installation/configuration/#security and from the GUI.
 ```
 
 
